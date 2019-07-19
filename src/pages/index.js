@@ -27,7 +27,7 @@ class IndexPage extends Component {
             <li>Paste it as your Instagram caption! <span role="img" aria-label="emoji with sunglasses">😎</span></li>
           </ol>
           <TextField
-            label="Paste Instagram caption here..."
+            label="Paste your caption here..."
             textarea="true"
             // helperText={<HelperText>Help Me!</HelperText>}
             onTrailingIconSelect={() => this.setState({ value: "" })}
