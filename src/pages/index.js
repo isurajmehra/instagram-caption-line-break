@@ -1,13 +1,10 @@
 import React, { Component } from "react"
-import TextField, { Input } from "@material/react-text-field"
-import MaterialIcon from "@material/react-material-icon"
-import Button from "@material/react-button"
 import Layout from "../components/Layout/Layout"
+import CaptionGenerator from "../components/CaptionGenerator/CaptionGenerator"
 import InstagramGlyph from "../images/icons/instagram-glyph.svg"
 import "../styles/app.scss"
 
 class IndexPage extends Component {
-  state = { value: "" }
   render() {
     return (
       <Layout>
@@ -26,23 +23,7 @@ class IndexPage extends Component {
             <li>Click the "Generate &amp; Copy Caption" Button</li>
             <li>Paste it as your Instagram caption! <span role="img" aria-label="emoji with sunglasses">😎</span></li>
           </ol>
-          <TextField
-            label="Paste your caption here..."
-            textarea="true"
-            // helperText={<HelperText>Help Me!</HelperText>}
-            onTrailingIconSelect={() => this.setState({ value: "" })}
-            trailingIcon={<MaterialIcon role="button" icon="delete" />}
-          >
-            <Input
-              value={this.state.value}
-              onChange={e =>
-                this.setState({ value: e.currentTarget.value })
-              }
-            />
-          </TextField>
-          <Button raised onClick={() => console.log("clicked!")}>
-            Generate &amp; Copy Caption
-          </Button>
+          <CaptionGenerator/>
         </section>
       </Layout>
     )
