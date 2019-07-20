@@ -23,7 +23,7 @@ body {
   position: relative;
   background-color: var(--mdc-theme-background);
   color: var(--mdc-theme-on-background);
-  line-height: 1.5rem;
+  line-height: 1.5;
   font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
@@ -67,24 +67,20 @@ a {
 }
 
 .mdc-button {
-  height: 3rem;
-  font-size: 1rem;
   @include InstagramGradient;
 }
 
 .anoun-insta-main__section {
   margin: 0 auto;
   width: 90%;
-  height: 90vh;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   img {
     width: 15%;
-    margin: 0.5rem auto;
+    margin: 1rem auto;
   }
-
   h1 {
     margin: 0;
   }
