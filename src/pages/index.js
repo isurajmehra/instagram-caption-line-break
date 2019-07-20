@@ -10,7 +10,7 @@ class IndexPage extends Component {
       <Layout>
         <section className="anoun-insta-main__section">
           <img src={HeroIcon} alt="Instagram Glyph Logo and block of text" />
-          <h1>Instagram Caption Tool</h1>
+          <h1>Instagram Caption Line Generator</h1>
           <p>
             Use this tool to create your instagram captions with simple and
             clean line breaks. It's super easy to use too!
