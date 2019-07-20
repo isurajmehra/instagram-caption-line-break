@@ -13,7 +13,7 @@ class Footer extends Component {
         <div>
           <h2>
             by{" "}
-            <a href="https://anoun.company" className="anoun-title">
+            <a href="https://anoun.company" target="_blank noopener noreferrer" className="anoun-title">
               ANOUN
             </a>
           </h2>
