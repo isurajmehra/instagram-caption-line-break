@@ -11,7 +11,12 @@ class Footer extends Component {
     return (
       <footer className={styles.siteFooter}>
         <div>
-          <h2>by <a href="https://anoun.company" className="anoun-title">ANOUN</a></h2>
+          <h2>
+            by{" "}
+            <a href="https://anoun.company" className="anoun-title">
+              ANOUN
+            </a>
+          </h2>
         </div>
         <div className={styles.footerSocialLinks}>
           <a

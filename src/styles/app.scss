@@ -115,21 +115,20 @@ a {
 /* WIDE LAYOUT STYLES */
 @media screen and (min-width: 1024px) {
   .anoun-title {
-  font-family: "Playfair Display", serif;
-  font-weight: 900;
-  display: inline-block;
-  cursor: pointer;
-  &::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    @include InstagramGradient;
-    transition: width 0.3s;
-  }
-  &:hover::after {
-    width: 100%;
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    display: inline-block;
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      @include InstagramGradient;
+      transition: width 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
-}
-

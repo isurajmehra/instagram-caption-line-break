@@ -21,9 +21,14 @@ class IndexPage extends Component {
             </li>
             <li>Paste it here</li>
             <li>Click the "Generate &amp; Copy Caption" Button</li>
-            <li>Paste it as your Instagram caption! <span role="img" aria-label="emoji with sunglasses">😎</span></li>
+            <li>
+              Paste it as your Instagram caption!{" "}
+              <span role="img" aria-label="emoji with sunglasses">
+                😎
+              </span>
+            </li>
           </ol>
-          <CaptionGenerator/>
+          <CaptionGenerator />
         </section>
       </Layout>
     )
