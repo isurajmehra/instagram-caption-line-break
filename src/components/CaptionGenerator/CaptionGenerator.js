@@ -3,10 +3,13 @@ import TextField, { Input } from "@material/react-text-field"
 import MaterialIcon from "@material/react-material-icon"
 import Button from "@material/react-button"
 import { Snackbar } from "@material/react-snackbar"
-
+import { CopyToClipboard } from "react-copy-to-clipboard"
 
 class CaptionGenerator extends React.Component {
-  state = { value: "" }
+  state = {
+    value: "",
+    copied: false,
+  }
   render() {
     return (
       <>
@@ -19,17 +22,25 @@ class CaptionGenerator extends React.Component {
         >
           <Input
             value={this.state.value}
-            onChange={e => this.setState({ value: e.currentTarget.value })}
+            onChange={({ target: { value } }) =>
+              this.setState({ value, copied: false })
+            }
           />
         </TextField>
-        <Button raised onClick={() => console.log("clicked!")}>
-          Generate &amp; Copy Caption
-        </Button>
-        <Snackbar
-          open={false}
-          message="Sent! We'll get back to you ASAP 😊"
-          actionText="dismiss"
-        />
+        <CopyToClipboard
+          text={this.state.value.replace(/(?:\r\n|\r|\n)/g, "\u2063\n")}
+          onCopy={() => this.setState({ copied: true })}
+        >
+          <Button raised className="insta-caption-generate__button">
+            Generate &amp; Copy Caption
+          </Button>
+        </CopyToClipboard>
+        {this.state.copied ? (
+          <Snackbar
+            message="Copied! Now go paste it in Insta 😉"
+            actionText="dismiss"
+          />
+        ) : null}
       </>
     )
   }
