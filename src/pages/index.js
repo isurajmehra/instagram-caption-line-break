@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/Layout/Layout"
 import CaptionGenerator from "../components/CaptionGenerator/CaptionGenerator"
-import InstagramGlyph from "../images/icons/instagram-glyph.svg"
+import HeroIcon from "../images/hero-icon.svg"
 import "../styles/app.scss"
 
 class IndexPage extends Component {
@@ -9,7 +9,7 @@ class IndexPage extends Component {
     return (
       <Layout>
         <section className="anoun-insta-main__section">
-          <img src={InstagramGlyph} alt="Instagram Glyph Logo" />
+          <img src={HeroIcon} alt="Instagram Glyph Logo and block of text" />
           <h1>Instagram Caption Tool</h1>
           <p>
             Use this tool to create your instagram captions with simple and
