@@ -92,6 +92,9 @@ a {
   ol {
     margin: 0 0 0.5rem 0;
   }
+  .mdc-text-field--textarea {
+    min-height: 18vh;
+  }
   button {
     margin: 0.5rem;
   }
