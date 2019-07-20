@@ -1,6 +1,6 @@
 import React from "react"
 // import Header from "../Header/Header"
-// import Footer from "../Footer/Footer"
+import Footer from "../Footer/Footer"
 import Container from '../Container/Container'
 import MetaLinks from "../MetaLinks/MetaLinks"
 
@@ -14,7 +14,7 @@ class Layout extends React.Component {
         <MetaLinks />
         {/* <Header /> */}
         <Container>{children}</Container>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     )
   }

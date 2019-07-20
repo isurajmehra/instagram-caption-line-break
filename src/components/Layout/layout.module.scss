@@ -1,1 +1,18 @@
+.siteWrapper {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow-x: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 90px;
+}
 
+// .siteMain {
+//   min-height: 100%;
+//   margin: 0 auto;
+// }
+
+@media screen and (min-width: 768px) {
+  .siteWrapper {
+    padding-bottom: 112px;
+  }
+}
