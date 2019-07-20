@@ -57,17 +57,16 @@ a {
   background: var(--mdc-theme-primary);
 }
 
-.mdc-floating-label {
-  @include mdc-text-field-caret-color(rgba(0, 0, 0, 0.64));
-  @include mdc-text-field-label-color(rgba(0, 0, 0, 0.64));
-}
-
 //ineligant solution for floating label color
 .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
   color: var(--mdc-theme-primary);
 }
 
-.mdc-button {
+.mdc-snackbar__action {
+  @include mdc-button-ink-color(#ffffff);
+}
+
+.insta-caption-generate__button {
   @include InstagramGradient;
 }
 
