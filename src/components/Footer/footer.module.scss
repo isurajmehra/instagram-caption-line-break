@@ -1,0 +1,32 @@
+.siteFooter {
+  position: absolute;
+    display: flex;
+bottom: 0.5rem;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.footerSocialLinks a {
+     margin-right: 12px;
+}
+
+.footerSocialLinks a:last-of-type{
+    margin-right: 0px;
+}
+
+.footerIcon {
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 650px) {
+  .siteFooter {
+    // flex-direction: row;
+  }
+
+  .footerNav {
+    flex-direction: row;
+  }
+}
