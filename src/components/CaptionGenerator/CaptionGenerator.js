@@ -3,13 +3,26 @@ import TextField, { Input } from "@material/react-text-field"
 import MaterialIcon from "@material/react-material-icon"
 import Button from "@material/react-button"
 import { Snackbar } from "@material/react-snackbar"
-import { CopyToClipboard } from "react-copy-to-clipboard"
 
 class CaptionGenerator extends React.Component {
+  textarea = null
   state = {
     value: "",
-    copied: false,
+    open: false,
   }
+
+  captionFixAndCopy = () => {
+    let inputElement = this.textarea.inputElement
+    let fixedCaption = inputElement.value
+    fixedCaption = fixedCaption.replace(/(?:\r\n|\r|\n)/g, "\u2063\n")
+    inputElement.value = fixedCaption
+    inputElement.select()
+    document.execCommand("copy")
+    this.setState({
+      open: true,
+    })
+  }
+
   render() {
     return (
       <>
@@ -22,25 +35,23 @@ class CaptionGenerator extends React.Component {
         >
           <Input
             value={this.state.value}
-            onChange={({ target: { value } }) =>
-              this.setState({ value, copied: false })
-            }
+            onChange={e => this.setState({ value: e.currentTarget.value })}
+            ref={textarea => (this.textarea = textarea)}
           />
         </TextField>
-        <CopyToClipboard
-          text={this.state.value.replace(/(?:\r\n|\r|\n)/g, "\u2063\n")}
-          onCopy={() => this.setState({ copied: true })}
+        <Button
+          raised
+          className="insta-caption-generate__button"
+          onClick={this.captionFixAndCopy}
         >
-          <Button raised className="insta-caption-generate__button">
-            Generate &amp; Copy Caption
-          </Button>
-        </CopyToClipboard>
-        {this.state.copied ? (
-          <Snackbar
-            message="Copied! Now go paste it in Insta 😉"
-            actionText="dismiss"
-          />
-        ) : null}
+          Generate &amp; Copy Caption
+        </Button>
+
+        <Snackbar
+          open={this.state.open}
+          message="Copied! Now go paste it in Insta 😉"
+          actionText="dismiss"
+        />
       </>
     )
   }
