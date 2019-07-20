@@ -2,6 +2,8 @@ import React from "react"
 import TextField, { Input } from "@material/react-text-field"
 import MaterialIcon from "@material/react-material-icon"
 import Button from "@material/react-button"
+import { Snackbar } from "@material/react-snackbar"
+
 
 class CaptionGenerator extends React.Component {
   state = { value: "" }
@@ -23,6 +25,11 @@ class CaptionGenerator extends React.Component {
         <Button raised onClick={() => console.log("clicked!")}>
           Generate &amp; Copy Caption
         </Button>
+        <Snackbar
+          open={false}
+          message="Sent! We'll get back to you ASAP 😊"
+          actionText="dismiss"
+        />
       </>
     )
   }
