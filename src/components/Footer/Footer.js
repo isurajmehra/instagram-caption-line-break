@@ -26,7 +26,7 @@ class Footer extends Component {
           >
             <img
               src={youtubeIcon}
-              className={styles.footerIcon}
+              className={styles.footerSocialIcon}
               width="32px"
               alt="youtube-social-link"
             />
@@ -38,7 +38,7 @@ class Footer extends Component {
           >
             <img
               src={instagramIcon}
-              className={styles.footerIcon}
+              className={styles.footerSocialIcon}
               width="32px"
               alt="instagram-social-link"
             />
@@ -50,19 +50,19 @@ class Footer extends Component {
           >
             <img
               src={githubIcon}
-              className={styles.footerIcon}
+              className={styles.footerSocialIcon}
               width="32px"
               alt="github-social-link"
             />
           </a>
           <a
-            href="https://github.com/anoun"
+            href="https://www.facebook.com/anouncompany/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
               src={facebookIcon}
-              className={styles.footerIcon}
+              className={styles.footerSocialIcon}
               width="32px"
               alt="github-social-link"
             />
