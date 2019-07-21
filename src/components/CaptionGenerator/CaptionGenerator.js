@@ -13,14 +13,18 @@ class CaptionGenerator extends React.Component {
 
   captionFixAndCopy = () => {
     let inputElement = this.textarea.inputElement
-    let fixedCaption = inputElement.value
-    fixedCaption = fixedCaption.replace(/(?:\r\n|\r|\n)/g, "\u2063\n")
-    inputElement.value = fixedCaption
-    inputElement.select()
-    document.execCommand("copy")
-    this.setState({
-      open: true,
-    })
+    if (inputElement.value.length === 0) {
+      return false;
+    } else {
+      let fixedCaption = inputElement.value
+      fixedCaption = fixedCaption.replace(/(?:\r\n|\r|\n)/g, "\u2063\n")
+      inputElement.value = fixedCaption
+      inputElement.select()
+      document.execCommand("copy")
+      this.setState({
+        open: true,
+      })
+    }
   }
 
   render() {
