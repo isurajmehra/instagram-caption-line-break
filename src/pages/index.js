@@ -1,20 +1,41 @@
 import React, { Component } from "react"
+import Button from "@material/react-button"
+
 import Layout from "../components/Layout/Layout"
 import CaptionGenerator from "../components/CaptionGenerator/CaptionGenerator"
+import ExampleModal from "../components/ExampleModal/ExampleModal"
+
 import HeroIcon from "../images/hero-icon.svg"
+
 import "../styles/app.scss"
 
 class IndexPage extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      ModalOpen: false,
+    }
+  }
+  showExampleModal = () => {
+    this.setState({
+      ModalOpen:true
+    }) 
+  }
   render() {
     return (
       <Layout>
         <section className="anoun-insta-main__section">
-          <img src={HeroIcon} alt="Instagram Glyph Logo and block of text" />
-          <h1>Instagram Caption Line Generator</h1>
+          <img
+            src={HeroIcon}
+            className="anoun-insta-hero__image"
+            alt="Instagram Glyph Logo and block of text"
+          />
+          <h1>Instagram Caption Line Break Tool</h1>
           <p>
             Use this tool to create your instagram captions with simple and
             clean line breaks. It's super easy to use too!
           </p>
+          <Button onClick={this.showExampleModal}>Show Example</Button>
           <ol>
             <li>
               Write up your caption as you normally would with line breaks
@@ -29,6 +50,7 @@ class IndexPage extends Component {
             </li>
           </ol>
           <CaptionGenerator />
+          <ExampleModal open={this.state.ModalOpen} />
         </section>
       </Layout>
     )
