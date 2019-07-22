@@ -41,7 +41,6 @@ class IndexPage extends Component {
             Use this tool to create your instagram captions with simple and
             clean line breaks. It's super easy to use too!
           </p>
-          <Button onClick={this.showExampleModal}>Show Example</Button>
           <ol>
             <li>
               Write up your caption as you normally would with line breaks
@@ -56,7 +55,11 @@ class IndexPage extends Component {
             </li>
           </ol>
           <CaptionGenerator />
-          <ExampleModal open={this.state.isModalOpen} onClose={this.closeExampleModal} />
+          <Button onClick={this.showExampleModal}>Show Example</Button>
+          <ExampleModal
+            open={this.state.isModalOpen}
+            onClose={this.closeExampleModal}
+          />
         </section>
       </Layout>
     )
