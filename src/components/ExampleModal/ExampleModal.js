@@ -10,7 +10,7 @@ import ExampleModalImage from "../../images/example-modal-iphone-image.png"
 
 function ExampleModal(props) {
     return (
-      <Dialog open={props.open}>
+      <Dialog open={props.open} onClose={props.onClose}>
         <DialogTitle>Caption Example</DialogTitle>
         <DialogContent>
           <img src={ExampleModalImage} width="300px" alt="example caption with line breaks"/>

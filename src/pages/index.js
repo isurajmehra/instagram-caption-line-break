@@ -13,14 +13,20 @@ class IndexPage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      ModalOpen: false,
+      isModalOpen: false,
     }
   }
   showExampleModal = () => {
     this.setState({
-      ModalOpen:true
+      isModalOpen:true
     }) 
   }
+  closeExampleModal = () => {
+    this.setState({
+      isModalOpen: false,
+    })
+  }
+
   render() {
     return (
       <Layout>
@@ -50,7 +56,7 @@ class IndexPage extends Component {
             </li>
           </ol>
           <CaptionGenerator />
-          <ExampleModal open={this.state.ModalOpen} />
+          <ExampleModal open={this.state.isModalOpen} onClose={this.closeExampleModal} />
         </section>
       </Layout>
     )
