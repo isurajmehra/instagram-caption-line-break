@@ -8,7 +8,7 @@ class CaptionGenerator extends React.Component {
   textarea = null
   state = {
     value: "",
-    open: false,
+    isSnackbarOpen: false,
   }
 
   captionFixAndCopy = () => {
@@ -22,9 +22,15 @@ class CaptionGenerator extends React.Component {
       inputElement.select()
       document.execCommand("copy")
       this.setState({
-        open: true,
+        isSnackbarOpen: true,
       })
     }
+  }
+
+  closeSnackbar = () => {
+    this.setState({
+        isSnackbarOpen: false,
+      })
   }
 
   render() {
@@ -52,7 +58,8 @@ class CaptionGenerator extends React.Component {
         </Button>
 
         <Snackbar
-          open={this.state.open}
+          open={this.state.isSnackbarOpen}
+          onClose={this.closeSnackbar}
           message="Copied! Now go paste it in Insta 😉"
           actionText="dismiss"
         />
