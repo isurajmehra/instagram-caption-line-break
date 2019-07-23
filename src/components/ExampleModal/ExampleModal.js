@@ -13,7 +13,7 @@ function ExampleModal(props) {
       <Dialog open={props.open} onClose={props.onClose}>
         <DialogTitle>Caption Example</DialogTitle>
         <DialogContent>
-          <img src={ExampleModalImage} width="300px" alt="example caption with line breaks"/>
+          <img src={ExampleModalImage} width="100%" alt="example caption with line breaks"/>
         </DialogContent>
         <DialogFooter>
           <DialogButton action="dismiss" isDefault>Dismiss</DialogButton>
