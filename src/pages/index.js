@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Button from "@material/react-button"
 
 import Layout from "../components/Layout/Layout"
+import SEO from "../components/SEO/SEO"
 import CaptionGenerator from "../components/CaptionGenerator/CaptionGenerator"
 import ExampleModal from "../components/ExampleModal/ExampleModal"
 
@@ -30,6 +31,7 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout>
+        <SEO/>
         <section className="anoun-insta-main__section">
           <img
             src={HeroIcon}
