@@ -3,7 +3,7 @@ module.exports = {
   description: ``,
   siteUrl: `https://instagram-caption-line-generator.netlify.com`, // Domain of your site. No trailing slash!
   image:
-    "instagram-caption-line-generator-share.png", // Used for SEO
+    "/instagram-caption-line-generator-share.png", // Used for SEO
 
   // Manifest
   icon: `src/images/favicon.png`, // Used for manifest favicon generation
