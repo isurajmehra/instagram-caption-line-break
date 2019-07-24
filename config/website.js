@@ -1,8 +1,9 @@
 module.exports = {
   title: `Instagram Caption Line Break Tool`, // Navigation and Site Title
   description: ``,
-  siteUrl: `https://instagram-caption-line-generator.netlify.com/`, // Domain of your site. No trailing slash!
-  image: "/images/instagram-caption-line-generator-share.png", // Used for SEO
+  siteUrl: `https://instagram-caption-line-generator.netlify.com`, // Domain of your site. No trailing slash!
+  image:
+    "https://instagram-caption-line-generator.netlify.com/instagram-caption-line-generator-share.png", // Used for SEO
 
   // Manifest
   icon: `src/images/favicon.png`, // Used for manifest favicon generation
