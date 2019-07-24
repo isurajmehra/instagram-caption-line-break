@@ -12,33 +12,38 @@ class CaptionGenerator extends React.Component {
   }
 
   captionFixAndCopy = () => {
-    let inputElement = this.textarea.inputElement
-    let fixedCaption = inputElement.value
+    let el = this.textarea.inputElement
+    let fixedCaption = el.value
     // this is the magic line that replaces normal line breaks with the invisible separator in UTF
     fixedCaption = fixedCaption.replace(/(?:\r\n|\r|\n)/g, "\u2063\n")
-    inputElement.value = fixedCaption
+    // replace value of textarea
+    el.value = fixedCaption
     // // handle iOS as a special case thanks to https://apps4lifehost.com/Instagram/CaptionMaker.html and https://stackoverflow.com/questions/34045777/copy-to-clipboard-using-javascript-in-ios
+    // resolve the element
+    el = typeof el === "string" ? document.querySelector(el) : el
+    // handle iOS as a special case
     if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
       // save current contentEditable/readOnly status
-      let editable = inputElement.contentEditable
-      let readOnly = inputElement.readOnly
+      var editable = el.contentEditable
+      var readOnly = el.readOnly
       // convert to editable with readonly to stop iOS keyboard opening
-      inputElement.contentEditable = true
-      inputElement.readOnly = true
-      // create selectable range
-      let range = document.createRange()
-      range.selectNodeContents(inputElement)
-      // select range
-      let selection = window.getSelection()
+      el.contentEditable = true
+      el.readOnly = true
+      // create a selectable range
+      var range = document.createRange()
+      range.selectNodeContents(el)
+      // select the range
+      var selection = window.getSelection()
       selection.removeAllRanges()
       selection.addRange(range)
-      inputElement.setSelectionRange(0, 999999)
+      el.setSelectionRange(0, 999999)
       // restore contentEditable/readOnly to original state
-      inputElement.contentEditable = editable
-      inputElement.readOnly = readOnly
+      el.contentEditable = editable
+      el.readOnly = readOnly
     } else {
-      inputElement.select()
+      el.select()
     }
+
     document.execCommand("copy")
     this.setState({
       isSnackbarOpen: true,
