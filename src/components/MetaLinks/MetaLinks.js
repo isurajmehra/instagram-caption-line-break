@@ -13,7 +13,7 @@ const MetaLinks = () => {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
         <link
-          href="https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap"
+          href="https://fonts.googleapis.com/css?family=Playfair+Display:900&text=ANOUN&display=swap"
           rel="stylesheet"
         />
       </Helmet>
