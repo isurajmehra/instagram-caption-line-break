@@ -14,5 +14,5 @@ module.exports = {
 
   // Social and Analytics
   twitterUsername: "@anouncompany", // Twitter Username
-  googleAnalyticsID: "",
+  googleAnalyticsID: "UA-122654359-4'",
 }
