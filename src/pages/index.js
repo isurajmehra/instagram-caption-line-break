@@ -38,7 +38,7 @@ class IndexPage extends Component {
             className="anoun-insta-hero__image"
             alt="Instagram Glyph Logo and block of text"
           />
-          <h1>Instagram Caption Line Break Tool</h1>
+          <h1>Instagram Caption Line Break</h1>
           <p>
             Use this tool to create your instagram captions with simple and
             clean line breaks. It's super easy to use too!
