@@ -1,9 +1,8 @@
 module.exports = {
   title: `Instagram Line Break`, // Navigation and Site Title
   description: ``,
-  siteUrl: `https://instagramlinebreak.com`, // Domain of your site. No trailing slash!
-  image:
-    "/instagram-caption-line-break-share.png", // Used for SEO
+  siteUrl: `https://instagramlinebreak.app`, // Domain of your site. No trailing slash!
+  image: "/instagram-caption-line-break-share.png", // Used for SEO
 
   // Manifest
   icon: `src/images/favicon.png`, // Used for manifest favicon generation
