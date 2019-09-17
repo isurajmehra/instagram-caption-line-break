@@ -71,6 +71,7 @@ class CaptionGenerator extends React.Component {
             onChange={e => this.setState({ value: e.currentTarget.value })}
             ref={el => (el = this.textarea = el)}
             name="caption input field"
+            type="text"
           />
         </TextField>
         <Button
