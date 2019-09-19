@@ -36,7 +36,7 @@ class IndexPage extends Component {
           <img
             src={HeroIcon}
             className="anoun-insta-hero__image"
-            alt="Instagram Glyph Logo and block of text"
+            alt="Instagram Line Break App Logo"
           />
           <h1>Instagram Line Break</h1>
           <p>
