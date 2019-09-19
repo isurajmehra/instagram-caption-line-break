@@ -19,8 +19,8 @@ class IndexPage extends Component {
   }
   showExampleModal = () => {
     this.setState({
-      isModalOpen:true
-    }) 
+      isModalOpen: true,
+    })
   }
   closeExampleModal = () => {
     this.setState({
@@ -31,7 +31,19 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <SEO/>
+        <SEO />
+        {/* <a
+          href="https://www.producthunt.com/posts/instagram-line-break?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-instagram-line-break"
+          target="_blank"
+          without
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=168306&theme=dark"
+            alt="Instagram Line Break - Simple clean line breaks for your Instagram captions | Product Hunt Embed"
+            className="anoun-insta-ph-badge__image"
+          />
+        </a> */}
         <section className="anoun-insta-main__section">
           <img
             src={HeroIcon}

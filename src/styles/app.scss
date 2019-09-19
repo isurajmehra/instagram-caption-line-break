@@ -4,8 +4,8 @@
 @import "@material/react-button/index.scss";
 @import "@material/react-material-icon/index.scss";
 @import "@material/react-text-field/index.scss";
-@import '@material/react-snackbar/index.scss';
-@import '@material/react-dialog/index.scss';
+@import "@material/react-snackbar/index.scss";
+@import "@material/react-dialog/index.scss";
 
 /* GLOBAL STYLES */
 
@@ -65,6 +65,21 @@ a {
 
 .mdc-snackbar__action {
   @include mdc-button-ink-color(#ffffff);
+}
+
+.anoun-insta-ph-badge__image {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .anoun-insta-ph-badge__image {
+    width: 250px;
+    height: 54px;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
 }
 
 .insta-caption-generate__button {
