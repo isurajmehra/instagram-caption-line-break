@@ -43,7 +43,7 @@ class CaptionGenerator extends React.Component {
     } else {
       el.select()
     }
-
+    // run the copy command and open the snackbar 
     document.execCommand("copy")
     this.setState({
       isSnackbarOpen: true,
