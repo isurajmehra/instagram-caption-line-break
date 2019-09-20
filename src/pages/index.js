@@ -32,7 +32,7 @@ class IndexPage extends Component {
     return (
       <Layout>
         <SEO />
-        {/* <a
+        <a
           href="https://www.producthunt.com/posts/instagram-line-break?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-instagram-line-break"
           target="_blank"
           without
@@ -43,7 +43,7 @@ class IndexPage extends Component {
             alt="Instagram Line Break - Simple clean line breaks for your Instagram captions | Product Hunt Embed"
             className="anoun-insta-ph-badge__image"
           />
-        </a> */}
+        </a>
         <section className="anoun-insta-main__section">
           <img
             src={HeroIcon}
