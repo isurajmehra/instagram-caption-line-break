@@ -13,7 +13,7 @@ class Footer extends Component {
             target="_blank noopener noreferrer"
             className="anoun-title"
           >
-            <img src={jaydanLogo} width="150px" />
+            <img src={jaydanLogo} alt="Jaydan Urwin Logo" width="150px" />
           </a>
         </div>
       </footer>
