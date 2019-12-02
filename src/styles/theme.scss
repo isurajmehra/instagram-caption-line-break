@@ -10,14 +10,14 @@
   --mdc-theme-on-background: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --mdc-theme-primary: #dc2743;
-    --mdc-theme-on-primary: #ffffff;
-    --mdc-theme-secondary: #000000;
-    --mdc-theme-on-secondary: #ffffff;
-    --mdc-theme-surface: #ffffff;
-    --mdc-theme-background: #222222;
-    --mdc-theme-on-background: #ffffff;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --mdc-theme-primary: #dc2743;
+//     --mdc-theme-on-primary: #ffffff;
+//     --mdc-theme-secondary: #000000;
+//     --mdc-theme-on-secondary: #ffffff;
+//     --mdc-theme-surface: #ffffff;
+//     --mdc-theme-background: #222222;
+//     --mdc-theme-on-background: #ffffff;
+//   }
+// }
