@@ -7,16 +7,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  div {
+    display: flex;
+    align-items: center;
+  }
 }
 
-.footerSocialLinks a {
-  margin-right: 1rem;
-}
-
-.footerSocialLinks a:last-of-type {
-  margin-right: 0;
-}
-
-.footerSocialIcon {
-  vertical-align: middle;
-}
